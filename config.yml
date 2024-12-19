@@ -1,0 +1,97 @@
+baseURL: "https://nnukez.com/"
+title: NNukeZ
+paginate: 5
+theme: hugo-PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+#googleAnalytics: UA-123-45
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    title: NNukeZ
+    description: "The Official Home Website for Nostalgic NukeZ"
+    keywords: [Blog, Portfolio, Tech, Games, Gaming, Food, Tech News, News]
+    author: NNukeZ
+    # author: ["Me", "You"] # multiple authors
+    images: ["/banner.png"]
+    DateFormat: "January 2, 2006"
+    defaultTheme: auto # dark, light
+    disableThemeToggle: false
+
+    ShowReadingTime: false
+    ShowShareButtons: true
+    ShowPostNavLinks: false
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: false
+    disableSpecial1stPost: false
+    disableScrollToTop: false
+    comments: true
+    hidemeta: false
+    hideSummary: false
+    showtoc: false
+    tocopen: false
+
+    assets:
+        # disableHLJS: true # to disable highlight.js
+        # disableFingerprinting: true
+        favicon: "<link / abs url>"
+        favicon16x16: "<link / abs url>"
+        favicon32x32: "<link / abs url>"
+        apple_touch_icon: "<link / abs url>"
+        safari_pinned_tab: "<link / abs url>"
+
+    label:
+        text: "Home"
+        icon: /logo.png
+        iconHeight: 35
+
+    # home-info mode
+    homeInfoParams:
+        Title: "Nostalgic NukeZ \U0001F44B"
+        Content: Games, Tech and Food
+
+    socialIcons:
+        - name: github
+          url: "https://github.com/OrbitalT"
+        - name: twitch
+          url: "https://twitch.tv/nostalgic_nukez"
+        - name: discord
+          url: "https://discord.gg/9DaFyAuTwF"
+
+    cover:
+        hidden: false # hide everywhere but not in structured data
+        hiddenInList: true # hide on list pages and home
+        hiddenInSingle: true # hide on single page
+
+    # for search
+    # https://fusejs.io/api/options.html
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+menu:
+    main:
+        - identifier: categories
+          name: categories
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: tags
+          url: /tags/
+          weight: 20
+        # - identifier: donate
+        #   name: donate BTC ₿
+        #   url: https://btcpay.orbital.llc/api/v1/invoices?storeId=9FFwEvw4SxgUXgaiszBvrXJ16oERjtu3KopT1aCoCrmU&checkoutDesc=Donation+to+NNukeZ&price=5&currency=USD
+        #   weight: 30
